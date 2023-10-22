@@ -20,10 +20,15 @@ Este projeto tem como objetivo analisar os projetos culturais apoiados pela Lei 
 
 ### Extract
 
+Nesta fase, os dados foram extraídos de um arquivo CSV. O código utiliza a biblioteca Pandas para ler os dados do arquivo CSV especificado no caminho 'seuarquivo.csv'. A função pd.read_csv é usada para carregar os dados do arquivo para um DataFrame do Pandas. Isso permite que os dados sejam manipulados e transformados nas próximas etapas do processo de ETL.
+
 ### Transform
+
+Nesta fase, os dados foram transformados e organizados de acordo com as necessidades da análise. O principal objetivo foi reorganizar as colunas de 'Valor Captado' para que fiquem ao lado das colunas de anos correspondentes. Isso foi feito criando um novo DataFrame chamado df_com_anos. As colunas de 'Valor Captado' foram extraídas do DataFrame original e anexadas ao novo DataFrame com rótulos de ano correspondentes. Além disso, as colunas de 'Valor Captado' foram transformadas em valores numéricos, removendo vírgulas, pontos, espaços e a formatação 'R$'. Qualquer valor ausente foi preenchido com 0.
 
 ### Load
 
+A fase de Load consiste em exibir os resultados e realizar qualquer ação adicional necessária, como calcular médias, criar gráficos ou até mesmo salvar os resultados transformados em um novo arquivo. Neste código, após a transformação, os resultados foram exibidos na forma do DataFrame df_com_anos com as tags de ano. Em seguida, o código calculou a média por região com base nos dados transformados e exibiu as médias por região no DataFrame media_por_regiao. Isso representa a fase de "Load" onde os resultados da transformação são apresentados para análise ou qualquer ação posterior.
 
 ## Instalação
 
